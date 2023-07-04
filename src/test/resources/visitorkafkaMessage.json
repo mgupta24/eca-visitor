@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "visitorFirstName": "TestVisitor",
+  "visitorLastName": "TestVisitor",
+  "visitorAddressLine": "Pratap Nagar",
+  "visitorCity": "Jaipur",
+  "visitorState": "Rajasthan",
+  "visitorZipCode": "302033",
+  "userPhoneNo": 3242343211,
+  "userFirstName": "TestUser",
+  "userLastName": "TestUser",
+  "userEmailId": "testuser@gmail.com",
+  "purposeOfVisiting": "Meeting friend",
+  "visitorId": "VS03",
+  "visitorRequestId": "req03"
+}

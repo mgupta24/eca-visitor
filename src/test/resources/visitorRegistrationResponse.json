@@ -1,0 +1,20 @@
+{
+  "timestamp": "2023-06-12T23:47:09.2501102",
+  "data": {
+    "visitorFirstName": "TestVisitor",
+    "visitorLastName": "TestVisitor",
+    "visitorId": 2,
+    "visitorRequestId": "VREQ-0E9C75F2",
+    "visitorAddressLine": "Pratap Nagar",
+    "visitorCity": "Jaipur",
+    "visitorState": "Rajasthan",
+    "visitorZipCode": "302033",
+    "purposeOfVisiting": "Meeting friend",
+    "userFirstName": "TestUser",
+    "userLastName": "TestUser",
+    "userEmailId": "test@gmail.com",
+    "userPhoneNo": 9590319707,
+    "apartmentId": 1,
+    "apartmentName": "TEST"
+  }
+}

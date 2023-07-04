@@ -1,0 +1,19 @@
+app:
+  visitor:
+    kafka:
+      enabled: false
+spring:
+  cloud:
+    discovery:
+      enabled: false
+    config:
+      enabled: false
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:visitor-service
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect

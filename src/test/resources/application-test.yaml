@@ -1,0 +1,30 @@
+app:
+  visitor:
+    kafka:
+      enabled: false
+      topic:
+         name: ${VISITOR_REQ_TOPIC:visitor_req_to_notification}
+         partitions: 1
+         replica-factor: 1
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9094
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:VISITOR-SERVICE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.eca.visitor: DEBUG
+    org.hibernate: ERROR
+    org.springframework.orm.jpa: INFO

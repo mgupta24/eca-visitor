@@ -1,0 +1,10 @@
+{
+  "visitorFirstName":"TestVisitor",
+  "visitorLastName":"TestVisitor",
+  "visitorAddressLine":"Pratap Nagar",
+  "visitorCity":"Jaipur",
+  "visitorState":"Rajasthan",
+  "visitorZipCode":"302033",
+  "userPhoneNo":9590319707,
+  "purposeOfVisiting":"Meeting friend"
+}

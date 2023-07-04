@@ -1,0 +1,28 @@
+{
+  "timestamp": "2023-06-09T23:08:12.4979065",
+  "data": [
+    {
+      "id": 10,
+      "username": "testOwner@gmail.com",
+      "owner": {
+        "type": "OWNER",
+        "firstName": "TestOwner",
+        "lastName": "TestOwner",
+        "phoneNo": 9898784532,
+        "emailId": "testOwner@gmail.com",
+        "addressLine": "1301 huda plots",
+        "city": "Gurgaon",
+        "state": "Haryana",
+        "zipCode": "123441",
+        "apartmentId": 1,
+        "apartmentName": "testApartment",
+        "id": 8
+      },
+      "userPhoneNumber": 9898784532,
+      "accountNonExpired": true,
+      "accountNonLocked": true,
+      "credentialsNonExpired": true,
+      "enabled": true
+    }
+  ]
+}

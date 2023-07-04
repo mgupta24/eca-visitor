@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: ecavisitor
+  profileS:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    config:
+      enabled: false
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1
+
+server:
+  port: 6091
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+app:
+  visitor:
+    kafka:
+      enabled: true
+      topic:
+        name: ${VISITOR_REQ_TOPIC:visitor_req_to_notification}
+        partitions: 1
+        replica-factor: 1
+  openapi:
+    dev-url: http://localhost:${server.port}
+    prod-url: ${SWAGGER_IP_ADDRESS:http://localhost:6091}
+  user-mgmt:
+    authTkn: ${USER_MGMT_AUTH_TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9PV05FUiJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJXUklURV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiVVBEQVRFX1BFUk1JU1NJT04ifV0sInVzZXJuYW1lIjoidmlzaGFic2luZ2hAZ21haWwuY29tIiwiaWF0IjoxNjg2MDQyMzY5LCJleHAiOjE2ODc3NzY4MDF9.rPmhvYqPaeSQmtENyFSud1-c0-Fv9H0_v0E3XDDw9Y0}
+
+logging:
+  level:
+    root: INFO
+
+microservice:
+  user-service:
+    endpoints:
+      endpoint:
+        uri: ${USER_SERVICE_ENDPOINT:http://localhost:6090/v1/users/phone/{phoneNumber}}
+
+eureka:
+  instance:
+    preferIpAddress: ${EUREKA_PREFER_IP:false}
+    hostname: localhost
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    health-check:
+      enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
